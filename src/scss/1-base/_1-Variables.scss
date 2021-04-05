@@ -5,8 +5,12 @@
 // Colors
 
 $colors: (
+  $white: hsl(0, 0%, 100%),
   $bg-element-dark: hsl(209, 23%, 22%),
   $bg-background-dark: hsl(207, 26%, 17%),
+  bg-background-light: hsl(0, 0%, 98%),
+  $color-light: hsl(200, 15%, 8%),
+  $color-input-light: hsl(0, 0%, 52%),
 );
 
 // Breakpoints
@@ -20,3 +24,7 @@ $break-laptop: 1024px;
 $font-light: "nunito_sans-light";
 $font-bold: "nunito_sans-bold";
 $font-extra: "nunito_sans-extra";
+
+// Other vars
+
+$border-radius: 6px;
