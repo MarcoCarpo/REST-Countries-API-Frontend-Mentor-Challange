@@ -13,7 +13,7 @@ const initialState = {
 
 const AppProvider = ({ children }) => {
   const [state, dispatch] = React.useReducer(reducer, initialState);
-  return <AppContext.Provider>{children}</AppContext.Provider>;
+  return <AppContext.Provider value={"hello"}>{children}</AppContext.Provider>;
 };
 
 export const useGlobalContext = () => React.useContext(AppContext);
