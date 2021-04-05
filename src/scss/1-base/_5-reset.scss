@@ -1,0 +1,46 @@
+// =========================================
+//                Reset
+// =========================================
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  //  Default font-family
+  // Default background
+  // Default color
+  line-height: 1.5;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+input,
+label,
+button,
+text-area {
+  font-family: inherit;
+}
