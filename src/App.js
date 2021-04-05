@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Home, Error, Country } from "./pages";
+import { Home, Error, CountryPage } from "./pages";
 import { Header } from "./components";
 
 function App() {
@@ -7,19 +7,17 @@ function App() {
     <div className="app">
       <Router>
         <Header />
-        <main className="app__main">
-          <Switch>
-            <Route path="/" exact>
-              <Home />
-            </Route>
-            <Route path="/countries/:id">
-              <Country />
-            </Route>
-            <Route path="*">
-              <Error />
-            </Route>
-          </Switch>
-        </main>
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/countries/:id">
+            <CountryPage />
+          </Route>
+          <Route path="*">
+            <Error />
+          </Route>
+        </Switch>
       </Router>
     </div>
   );
