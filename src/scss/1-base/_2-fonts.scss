@@ -1,10 +1,26 @@
 @font-face {
-  font-family: "montserratbold";
-  src: url("../../fonts/montserrat-bold-webfont.woff2") format("woff2"),
-    url("../../fonts/montserrat-bold-webfont.woff") format("woff"),
-    url("../../fonts/Montserrat-Bold.ttf") format("truetype");
+  font-family: "nunito_sans-bold";
+  src: url("nunitosans-bold-webfont.woff2") format("woff2"),
+    url("nunitosans-bold-webfont.woff") format("woff"),
+    url("nunitosans-bold-webfont.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
+@font-face {
+  font-family: "nunito_sans-extrabold";
+  src: url("nunitosans-extrabold-webfont.woff2") format("woff2"),
+    url("nunitosans-extrabold-webfont.woff") format("woff"),
+    url("nunitosans-extrabold-webfont.tff") format("tff");
+  font-weight: normal;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: "nunito_sans-light";
+  src: url("nunitosans-light-webfont.woff2") format("woff2"),
+    url("nunitosans-light-webfont.woff") format("woff"),
+    url("nunitosans-light-webfont.tff") format("tff");
+  font-weight: normal;
+  font-style: normal;
+}

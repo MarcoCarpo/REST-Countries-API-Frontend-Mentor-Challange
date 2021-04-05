@@ -1,8 +1,11 @@
+// Import react and react-dom
 import React from "react";
 import ReactDOM from "react-dom";
 
+// Import scss styles
 import "./scss/style.scss";
 
+// Import components
 import App from "./App";
 import AppContext from "./context";
 

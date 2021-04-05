@@ -3,6 +3,10 @@ import { reducer } from "./reducer";
 
 const AppContext = React.createContext();
 
+// Rest Countries API Endpoints
+const ALL_URL = "https://restcountries.eu/rest/v2/all";
+const SEARCH_BY_NAME = "https://restcountries.eu/rest/v2/name/";
+
 const initialState = {
   loading: false,
 };
