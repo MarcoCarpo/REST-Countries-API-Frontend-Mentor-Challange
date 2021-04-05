@@ -1,0 +1,81 @@
+.search {
+  color: map-get($map: $colors, $key: white);
+  @include flex(initial, flex-start);
+  flex-wrap: wrap;
+  gap: 4rem;
+
+  &__input {
+    width: 100%;
+    background: map-get($map: $colors, $key: bg-element-dark);
+    @include flex(flex-start, center);
+    padding: 2rem 3rem;
+    gap: 2rem;
+    border-radius: $border-radius-default;
+
+    button {
+      background: none;
+      color: inherit;
+    }
+
+    input {
+      font-size: 1.2rem;
+      background: none;
+      border: none;
+      color: inherit;
+
+      &::placeholder {
+        color: inherit;
+      }
+    }
+  }
+
+  &__icon {
+    font-size: 1.5rem;
+  }
+
+  &__select {
+    background: map-get($map: $colors, $key: bg-element-dark);
+    padding: 2rem;
+    position: relative;
+    border-radius: $border-radius-default;
+    width: 60%;
+    font-size: 1.2rem;
+
+    & > button {
+      width: 100%;
+      @include flex(space-between, center);
+      background: none;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      color: inherit;
+    }
+  }
+
+  &__dropdown {
+    background: map-get($map: $colors, $key: bg-element-dark);
+    border-radius: $border-radius-default;
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    height: 0;
+    transition: 0.2s;
+  }
+
+  &__show-dropdown {
+    height: auto;
+  }
+
+  &__dropdown-content {
+    @include flex(initial, initial, column);
+    padding: 1rem 0;
+    button {
+      color: inherit;
+      background: none;
+      text-align: left;
+      padding: 0.7rem 2rem;
+    }
+  }
+}

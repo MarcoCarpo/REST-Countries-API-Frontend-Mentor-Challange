@@ -1,12 +1,9 @@
-import { Search, Filter, CountryItem } from "../components";
+import { Search, CountryItem } from "../components";
 
 const Home = () => {
   return (
     <main className="home">
-      <section className="home__search-filter">
-        <Search />
-        <Filter />
-      </section>
+      <Search />
       <section className="home__countries">
         <CountryItem />
         <CountryItem />

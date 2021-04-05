@@ -4,4 +4,5 @@
   background: map-get($map: $colors, $key: bg-background-dark);
   // Delete this color here
   color: white;
+  @include flex(initial, initial, column);
 }
