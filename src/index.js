@@ -7,15 +7,16 @@ import "./scss/style.scss";
 
 // Import components
 import App from "./App";
-import AppContext from "./context";
+import AppProvider from "./context";
 
 import reportWebVitals from "./reportWebVitals";
 
+
 ReactDOM.render(
   <React.StrictMode>
-    <AppContext>
+    <AppProvider>
       <App />
-    </AppContext>
+    </AppProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
