@@ -1,3 +1,21 @@
 .header {
-  border: 1px solid black;
+  background: map-get($map: $colors, $key: bg-element-dark);
+  padding: $padding-default-vertical $padding-default;
+  color: map-get($map: $colors, $key: white);
+  @include flex(space-between, center);
+  font-family: $font-bold;
+
+  &__title {
+    font-size: 1.4rem;
+    line-height: 1;
+  }
+
+  &__dark-mode {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    background: none;
+    @include flex(center, flex-start);
+    gap: 0.8rem;
+    color: map-get($map: $colors, $key: white);
+  }
 }

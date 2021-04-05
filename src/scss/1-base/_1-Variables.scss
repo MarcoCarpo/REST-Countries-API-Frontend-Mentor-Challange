@@ -17,14 +17,17 @@ $colors: (
 
 $break-mobile: 375px;
 $break-tablet: 768px;
-$break-laptop: 1024px;
+$break-laptop: 1280px;
 
 // Fonts
 
-$font-light: "nunito_sans-light";
-$font-bold: "nunito_sans-bold";
-$font-extra: "nunito_sans-extra";
+$font-light: "nunito_sans-light", sans-serif;
+$font-bold: "nunito_sans-bold", sans-serif;
+$font-extra: "nunito_sans-extrabold", sans-serif;
 
 // Other vars
 $margin-default: 15px;
+$padding-default: 15px;
+$margin-default-vertical: 45px;
+$padding-default-vertical: 25px;
 $border-radius: 6px;

@@ -1,0 +1,7 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background: map-get($map: $colors, $key: bg-background-dark);
+  // Delete this color here
+  color: white;
+}
