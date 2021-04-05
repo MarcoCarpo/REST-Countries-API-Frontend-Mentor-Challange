@@ -1,21 +1,31 @@
 .header {
   background: map-get($map: $colors, $key: bg-element-dark);
-  padding: $padding-default-vertical $padding-default;
   color: map-get($map: $colors, $key: white);
-  @include flex(space-between, center);
   font-family: $font-bold;
 
+  &__content {
+    @include flex(space-between, center);
+    padding: $padding-default-vertical $padding-default;
+    max-width: $break-laptop;
+    margin: 0 auto;
+  }
+
   &__title {
-    font-size: 1.4rem;
+    @include linear-font-size(1.4rem, 2.4rem, 37.5rem, 144rem);
+
     line-height: 1;
   }
 
   &__dark-mode {
-    font-size: 1.2rem;
+    font-family: $font-light;
+    @include linear-font-size(1.2rem, 1.6rem, 37.5rem, 144rem);
     text-transform: capitalize;
     background: none;
     @include flex(center, flex-start);
     gap: 0.8rem;
     color: map-get($map: $colors, $key: white);
+  }
+
+  @media (min-width: $break-tablet) {
   }
 }

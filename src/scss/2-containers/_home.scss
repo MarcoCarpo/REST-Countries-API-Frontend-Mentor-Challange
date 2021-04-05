@@ -1,4 +1,20 @@
 .home {
   flex: 1;
   padding: $padding-default;
+  width: 100%;
+  max-width: $break-laptop;
+
+  &__countries {
+    padding: 3rem 0;
+    @include flex(center, initial);
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+  @media (min-width: $break-tablet) {
+    margin: 0 auto;
+
+    &__countries {
+      justify-content: flex-start;
+    }
+  }
 }
