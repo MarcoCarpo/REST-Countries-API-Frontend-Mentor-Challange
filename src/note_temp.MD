@@ -15,6 +15,8 @@ L'app si compone di tre pagine (usando React Router):
 
 ...
 
+Parla dei fonts
+
 ### Context and Reducer
 
 In context.js ho creato il contesto per fare in modo che tutte le variabili siano disponibili in ogni component/container, evitando il prop drilling. 
