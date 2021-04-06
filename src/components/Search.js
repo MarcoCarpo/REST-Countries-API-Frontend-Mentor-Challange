@@ -11,8 +11,6 @@ const Search = () => {
     ),
   ];
 
-  console.log(regions);
-
   return (
     <form className="search">
       <div className="search__content">

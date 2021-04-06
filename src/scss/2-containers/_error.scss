@@ -1,0 +1,30 @@
+.error {
+  width: 100%;
+  flex: 1;
+  display: grid;
+  place-content: center;
+  place-items: center;
+
+  a {
+    color: inherit;
+  }
+
+  &__btn {
+    color: inherit;
+    @include flex(center, center);
+    gap: 1rem;
+    background: map-get($map: $colors, $key: bg-element-dark);
+    padding: 1rem 2.5rem;
+    @include linear-font-size(1.2rem, 1.4rem, 37.5rem, 144rem);
+    box-shadow: 0px 0px 5px -2px black;
+    border-radius: 0.3rem;
+  }
+
+  &__title {
+    font-size: 12rem;
+  }
+
+  &__desc {
+    font-size: 6rem;
+  }
+}

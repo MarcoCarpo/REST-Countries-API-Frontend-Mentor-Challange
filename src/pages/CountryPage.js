@@ -33,11 +33,11 @@ const CountryPage = () => {
 
   return (
     <main className="country">
-      <button className="country__btn">
-        <Link to="/">
+      <Link to="/">
+        <button className="error__btn">
           <FaLongArrowAltLeft /> Back
-        </Link>
-      </button>
+        </button>
+      </Link>
 
       <section className="country__content">
         <div className="country__image">
@@ -84,11 +84,12 @@ const CountryPage = () => {
               {borderCountries.length > 0 ? (
                 borderCountries.map((country, index) => {
                   return (
-                    <button key={country.alpha3Code} className="country__btn">
-                      <Link to={`/countries/${country.alpha3Code}`}>
-                        {country.name}
-                      </Link>
-                    </button>
+                    <Link
+                      to={`/countries/${country.alpha3Code}`}
+                      key={country.alpha3Code}
+                    >
+                      <button className="country__btn">{country.name}</button>
+                    </Link>
                   );
                 })
               ) : (

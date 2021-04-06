@@ -1,8 +1,13 @@
 import { useGlobalContext } from "../context";
 import { Search, CountryItem } from "../components";
+import Loading from "../components/Loading";
 
 const Home = () => {
-  const { countries } = useGlobalContext();
+  const { countries, isLoading } = useGlobalContext();
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <main className="home">

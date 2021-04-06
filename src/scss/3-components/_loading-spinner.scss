@@ -1,0 +1,23 @@
+.loading-spinner {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  border-radius: 50%;
+  border: 15px solid map-get($map: $colors, $key: white);
+  border-top-color: map-get($map: $colors, $key: bg-element-dark);
+  border-left-color: map-get($map: $colors, $key: bg-element-dark);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin 0.4s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotateZ(359deg);
+  }
+}

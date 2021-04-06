@@ -1,3 +1,15 @@
 export const reducer = (state, action) => {
-  return state;
+  switch (action.type) {
+    case "SET_LOADING":
+      return { ...state, isLoading: action.payload };
+
+    case "GET_COUNTRIES":
+      return { ...state, countries: action.payload };
+
+    case "SET_QUERY":
+      return { ...state, query: action.payload };
+
+    default:
+      return state;
+  }
 };
