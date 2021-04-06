@@ -1,6 +1,6 @@
 # Frontend Mentor - REST Countries API with color theme switcher solution
 
-This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is my solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca).
 
 ## Table of contents
 
@@ -46,7 +46,7 @@ Users should be able to:
 - To implement the app I used the React.js library.
 - React Router was used to create three routes: the home with all countries, the page with the single country, while al the other routes point to an error page.
 - In context.js I created a global context to make all states and functions available globally, in order to avoid prop drilling.
-- To change states I used a reducer function by using useReducer.
+- To change states I used a reducer function with useReducer.
 
 ### SCSS
 
