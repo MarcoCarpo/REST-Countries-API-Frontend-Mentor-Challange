@@ -3,7 +3,7 @@ import { FaSearch, FaAngleDown } from "react-icons/fa";
 import { useGlobalContext } from "../context";
 
 const Search = () => {
-  const { countries } = useGlobalContext();
+  const { countries, query, setQuery, setFilter } = useGlobalContext();
   const regions = [
     "All Regions",
     ...Array.from(new Set(countries.map((country) => country.region))).filter(
@@ -11,17 +11,29 @@ const Search = () => {
     ),
   ];
 
+  const submitHandler = (e) => {
+    setQuery(e.target.value);
+  };
+
+  const filterHandler = (e) => {
+    setFilter(e.target.value);
+  };
+
   return (
-    <form className="search">
+    <form className="search" onSubmit={(e) => e.preventDefault()}>
       <div className="search__content">
         <div className="search__input">
-          <button type="submit">
-            <FaSearch className="search__icon" />
-          </button>
-          <input type="text" placeholder="Search for a country... " />
+          <FaSearch className="search__icon" />
+
+          <input
+            type="text"
+            placeholder="Search for a country... "
+            value={query}
+            onChange={(e) => submitHandler(e)}
+          />
         </div>
         <div className="search__select">
-          <select>
+          <select onChange={(e) => filterHandler(e)}>
             {regions.map((region, index) => {
               return (
                 <option key={index} value={region}>

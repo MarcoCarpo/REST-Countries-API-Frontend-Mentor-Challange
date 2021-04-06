@@ -9,28 +9,29 @@ const AppContext = React.createContext();
 
 // Rest Countries API Endpoints
 const ALL_URL = "https://restcountries.eu/rest/v2/all";
-const SEARCH_BY_NAME = "https://restcountries.eu/rest/v2/name/";
 
 const initialState = {
   isLoading: false,
   countries: [],
   query: "",
+  filter: "All Regions",
+  theme: "dark-theme",
 };
 
 const AppProvider = ({ children }) => {
   const [state, dispatch] = React.useReducer(reducer, initialState);
 
-  const fetchData = async () => {
+  const fetchData = async (query) => {
     setLoading(true);
     try {
       const data = await axios(ALL_URL);
-      console.log(data);
       if (data.status === 200) {
         getCountries(data.data);
-        setLoading(false);
       }
+      setLoading(false);
     } catch (error) {
       console.log(error);
+      setLoading(false);
     }
   };
 
@@ -46,12 +47,18 @@ const AppProvider = ({ children }) => {
     dispatch({ type: "SET_QUERY", payload: query });
   };
 
+  const setFilter = (region) => {
+    dispatch({ type: "SET_FILTER", payload: region });
+  };
+
   React.useEffect(() => {
     fetchData();
   }, []);
 
   return (
-    <AppContext.Provider value={{ ...state }}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{ ...state, setQuery, fetchData, setFilter }}>
+      {children}
+    </AppContext.Provider>
   );
 };
 
