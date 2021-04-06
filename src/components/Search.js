@@ -40,7 +40,7 @@ const Search = () => {
           <FaSearch className="search__icon" />
 
           <input
-            aria-labelledby="search"
+            aria-label="search"
             type="text"
             placeholder="Search for a country... "
             value={query}
@@ -55,7 +55,7 @@ const Search = () => {
                   key={index}
                   value={region}
                   defaultValue={region === filter && "selected"}
-                  aria-labelledby="option"
+                  aria-label="option"
                 >
                   {region}
                 </option>
