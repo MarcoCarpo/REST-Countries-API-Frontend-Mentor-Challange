@@ -1,0 +1,91 @@
+.country {
+  color: map-get($map: $colors, $key: white);
+  flex: 1;
+  padding: $padding-default-vertical $padding-default;
+  width: 100%;
+  max-width: $break-laptop;
+  margin: 0 auto;
+
+  &__btn {
+    color: inherit;
+    background: map-get($map: $colors, $key: bg-element-dark);
+    padding: 1rem 2.5rem;
+    @include linear-font-size(1.2rem, 1.4rem, 37.5rem, 144rem);
+    box-shadow: 0px 0px 5px -2px black;
+    border-radius: 0.3rem;
+
+    a {
+      @include flex(center, center);
+      color: inherit;
+      gap: 1rem;
+    }
+  }
+
+  &__content {
+    margin-top: $margin-default-vertical + 10px;
+    @include flex(center, flex-start);
+    flex-wrap: wrap;
+
+    @media (min-width: $break-tablet) {
+      justify-content: space-between;
+    }
+  }
+
+  &__image {
+    width: 200px;
+  }
+
+  &__main {
+    margin-top: $margin-default-vertical;
+    opacity: 0.9;
+
+    p {
+      font-size: 1.4rem;
+      font-family: $font-light;
+      strong {
+        font-family: $font-bold;
+      }
+    }
+
+    @media (min-width: $break-tablet) {
+      margin-top: 0;
+    }
+  }
+
+  &__name {
+    font-family: $font-extra;
+    @include linear-font-size(1.8rem, 3.2rem, 37.5rem, 144rem);
+  }
+
+  &__top-info,
+  &__middle-info {
+    margin-top: 2rem;
+    @include flex(initial, initial, column);
+    gap: 1rem;
+  }
+
+  &__middle-info {
+    margin-top: $margin-default-vertical;
+  }
+
+  &__borders {
+    margin-top: 2rem;
+  }
+
+  &__borders-title {
+    font-size: 1.6rem;
+  }
+
+  &__borders-content {
+    margin-top: 1rem;
+    @include flex(initial, initial);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  @media (min-width: $break-tablet) {
+    &__image {
+      max-width: 50%;
+    }
+  }
+}

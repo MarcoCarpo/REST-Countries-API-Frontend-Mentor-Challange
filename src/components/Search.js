@@ -19,8 +19,8 @@ const Search = () => {
         </div>
         <div className="search__select">
           <select>
-            {regions.map((region) => {
-              return <option>{region}</option>;
+            {regions.map((region, index) => {
+              return <option key={index}>{region}</option>;
             })}
           </select>
         </div>

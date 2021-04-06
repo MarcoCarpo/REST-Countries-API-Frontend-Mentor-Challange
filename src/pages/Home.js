@@ -10,8 +10,8 @@ const Home = () => {
       <Search />
       <section className="home__countries">
         {countries.map((country) => {
-          const { numericCode } = country;
-          return <CountryItem key={numericCode} {...country} />;
+          const { alpha3Code } = country;
+          return <CountryItem key={alpha3Code} {...country} />;
         })}
       </section>
     </main>

@@ -14,7 +14,7 @@ const CountryItem = ({
   population,
   region,
   capital,
-  numericCode,
+  alpha3Code,
 }) => {
   return (
     <article className="country-item">
@@ -24,7 +24,7 @@ const CountryItem = ({
       <div className="country-item__content">
         <header className="country-item__name">
           <h4>
-            <Link to={`/countries/${numericCode}`}>{name}</Link>
+            <Link to={`/countries/${alpha3Code}`}>{name}</Link>
           </h4>
         </header>
         <section className="country-item__info">
