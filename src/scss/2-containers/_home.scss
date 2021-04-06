@@ -12,10 +12,9 @@
     gap: 7rem;
   }
 
-  @media (min-width: $break-tablet) {
+  @media (min-width: $break-laptop) {
     &__countries {
       justify-content: space-between;
-
     }
   }
 

@@ -4,9 +4,14 @@ import { useGlobalContext } from "../context";
 
 const Search = () => {
   const { countries } = useGlobalContext();
-  const regions = Array.from(
-    new Set(countries.map((country) => country.region))
-  );
+  const regions = [
+    "All Regions",
+    ...Array.from(new Set(countries.map((country) => country.region))).filter(
+      (region) => region
+    ),
+  ];
+
+  console.log(regions);
 
   return (
     <form className="search">
@@ -20,7 +25,11 @@ const Search = () => {
         <div className="search__select">
           <select>
             {regions.map((region, index) => {
-              return <option key={index}>{region}</option>;
+              return (
+                <option key={index} value={region}>
+                  {region}
+                </option>
+              );
             })}
           </select>
         </div>

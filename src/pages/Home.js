@@ -3,7 +3,6 @@ import { Search, CountryItem } from "../components";
 
 const Home = () => {
   const { countries } = useGlobalContext();
-  console.log(countries);
 
   return (
     <main className="home">

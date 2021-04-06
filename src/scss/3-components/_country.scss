@@ -1,7 +1,7 @@
 .country {
   color: map-get($map: $colors, $key: white);
   flex: 1;
-  padding: $padding-default-vertical $padding-default;
+  padding: $padding-default-vertical 2.5rem;
   width: 100%;
   max-width: $break-laptop;
   margin: 0 auto;
@@ -26,19 +26,30 @@
     @include flex(center, flex-start);
     flex-wrap: wrap;
 
-    @media (min-width: $break-tablet) {
+    @media (min-width: $break-laptop) {
       justify-content: space-between;
     }
   }
 
   &__image {
-    width: 200px;
+    width: 100%;
+    max-width: 56.5rem;
+  }
+
+  &__info {
+    margin-top: $margin-default-vertical;
+    width: 100%;
+    max-width: 56.5rem;
+
+    @media (min-width: $break-laptop) {
+      margin-top: 0;
+    }
   }
 
   &__main {
-    margin-top: $margin-default-vertical;
+    margin-top: 1rem;
     opacity: 0.9;
-
+    flex-wrap: wrap;
     p {
       font-size: 1.4rem;
       font-family: $font-light;
@@ -49,6 +60,7 @@
 
     @media (min-width: $break-tablet) {
       margin-top: 0;
+      @include flex(space-between, flex-start);
     }
   }
 
@@ -77,6 +89,7 @@
   }
 
   &__borders-content {
+    width: 100%;
     margin-top: 1rem;
     @include flex(initial, initial);
     flex-wrap: wrap;

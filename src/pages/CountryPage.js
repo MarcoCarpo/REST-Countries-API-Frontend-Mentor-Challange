@@ -44,8 +44,8 @@ const CountryPage = () => {
           <img src={flag} alt={name} />
         </div>
         <div className="country__info">
+          <h2 className="country__name">{name}</h2>
           <div className="country__main">
-            <h2 className="country__name">{name}</h2>
             <div className="country__top-info">
               <p>
                 <strong>Native Name</strong>: {nativeName}
