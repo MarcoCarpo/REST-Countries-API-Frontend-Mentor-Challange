@@ -4,26 +4,27 @@
 
 // Colors
 
+$colors: (
+  white: hsl(0, 0%, 100%),
+  bg-element-dark: hsl(209, 23%, 22%),
+  bg-background-dark: hsl(207, 26%, 17%),
+  bg-background-light: hsl(0, 0%, 98%),
+  color-light: hsl(200, 15%, 8%),
+  color-input-light: hsl(0, 0%, 52%),
+);
+
 .dark-theme {
-  $colors: (
-    white: hsl(0, 0%, 100%),
-    bg-element-dark: hsl(209, 23%, 22%),
-    bg-background-dark: hsl(207, 26%, 17%),
-    bg-background-light: hsl(0, 0%, 98%),
-    color-light: hsl(200, 15%, 8%),
-    color-input-light: hsl(0, 0%, 52%),
-  );
+  --text-color: hsl(0, 0%, 100%);
+  --input-color: hsl(0, 0%, 100%);
+  --background-app: hsl(207, 26%, 17%);
+  --background-element: hsl(209, 23%, 22%);
 }
 
 .light-theme {
-  $colors: (
-    white: hsl(0, 0%, 100%),
-    bg-element-dark: hsl(209, 23%, 22%),
-    bg-background-dark: hsl(207, 26%, 17%),
-    bg-background-light: hsl(0, 0%, 98%),
-    color-light: hsl(200, 15%, 8%),
-    color-input-light: hsl(0, 0%, 52%),
-  );
+  --text-color: hsl(200, 15%, 8%);
+  --background-app: hsl(0, 0%, 98%);
+  --background-element: hsl(0, 0%, 100%);
+  --input-color: hsl(0, 0%, 52%);
 }
 
 // Breakpoints

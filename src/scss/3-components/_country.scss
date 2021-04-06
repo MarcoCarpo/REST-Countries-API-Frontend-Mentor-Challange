@@ -1,5 +1,5 @@
 .country {
-  color: map-get($map: $colors, $key: white);
+  color: var(--text-color);
   flex: 1;
   padding: $padding-default-vertical 2.5rem;
   width: 100%;
@@ -14,7 +14,7 @@
     color: inherit;
     @include flex(center, center);
     gap: 1rem;
-    background: map-get($map: $colors, $key: bg-element-dark);
+    background: var(--background-element);
     padding: 1rem 2.5rem;
     @include linear-font-size(1.2rem, 1.4rem, 37.5rem, 144rem);
     box-shadow: 0px 0px 5px -2px black;

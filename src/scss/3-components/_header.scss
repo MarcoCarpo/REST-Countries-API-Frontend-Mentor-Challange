@@ -1,6 +1,6 @@
 .header {
-  background: map-get($map: $colors, $key: bg-element-dark);
-  color: map-get($map: $colors, $key: white);
+  background: var(--background-element);
+  color: var(--text-color);
   font-family: $font-bold;
 
   &__content {
@@ -16,13 +16,14 @@
   }
 
   &__dark-mode {
+    outline: transparent;
     font-family: $font-light;
     @include linear-font-size(1.2rem, 1.6rem, 37.5rem, 144rem);
     text-transform: capitalize;
     background: none;
     @include flex(center, flex-start);
     gap: 0.8rem;
-    color: map-get($map: $colors, $key: white);
+    color: var(--text-color);
   }
 
   @media (min-width: $break-laptop) {

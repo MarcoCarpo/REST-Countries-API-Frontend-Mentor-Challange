@@ -3,7 +3,7 @@ import { Search, CountryItem } from "../components";
 import Loading from "../components/Loading";
 
 const Home = () => {
-  const { countries, isLoading, query, filter } = useGlobalContext();
+  const { countries, isLoading, query, filter, theme } = useGlobalContext();
 
   return (
     <main className="home">

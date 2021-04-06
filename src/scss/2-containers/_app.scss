@@ -1,8 +1,8 @@
 .app {
   width: 100%;
   min-height: 100vh;
-  background: map-get($map: $colors, $key: bg-background-dark);
+  background: var(--background-app);
   // Delete this color here
-  color: white;
+  color: var(--text-color);
   @include flex(initial, initial, column);
 }

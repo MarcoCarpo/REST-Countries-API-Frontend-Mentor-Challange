@@ -1,5 +1,5 @@
 .search {
-  color: map-get($map: $colors, $key: white);
+  color: var(--text-color);
 
   &__content {
     @include flex(space-between, flex-start);
@@ -10,24 +10,19 @@
   &__input {
     width: 100%;
     max-width: 50rem;
-    background: map-get($map: $colors, $key: bg-element-dark);
+    background: var(--background-element);
     @include flex(flex-start, center);
     padding: 2rem 3rem;
     gap: 2rem;
     border-radius: $border-radius-default;
-
-    button {
-      background: none;
-      color: inherit;
-    }
+    color: var(--input-color);
 
     input {
       outline: none;
       @include linear-font-size(1.2rem, 1.6rem, 37.5rem, 144rem);
-
+      color: var(--input-color);
       background: none;
       border: none;
-      color: inherit;
 
       &::placeholder {
         color: inherit;
@@ -42,7 +37,6 @@
   &__select {
     width: 100%;
     max-width: 20rem;
-    color: map-get($map: $colors, $key: white);
 
     select {
       color: inherit;
@@ -54,7 +48,7 @@
 
     option {
       color: inherit;
-      background: map-get($map: $colors, $key: bg-element-dark);
+      background: var(--background-element);
       border: none;
     }
   }

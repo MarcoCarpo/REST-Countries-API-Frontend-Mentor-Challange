@@ -15,7 +15,7 @@ const initialState = {
   countries: [],
   query: "",
   filter: "All Regions",
-  theme: "dark-theme",
+  theme: "light-theme",
 };
 
 const AppProvider = ({ children }) => {
@@ -51,12 +51,24 @@ const AppProvider = ({ children }) => {
     dispatch({ type: "SET_FILTER", payload: region });
   };
 
+  const setTheme = () => {
+    dispatch({ type: "SET_THEME" });
+  };
+
   React.useEffect(() => {
     fetchData();
   }, []);
 
   return (
-    <AppContext.Provider value={{ ...state, setQuery, fetchData, setFilter }}>
+    <AppContext.Provider
+      value={{
+        ...state,
+        setQuery,
+        fetchData,
+        setFilter,
+        setTheme,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );

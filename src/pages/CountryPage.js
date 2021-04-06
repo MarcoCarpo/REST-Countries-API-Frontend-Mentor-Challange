@@ -4,7 +4,7 @@ import { useGlobalContext } from "../context";
 
 const CountryPage = () => {
   const { id } = useParams();
-  const { countries } = useGlobalContext();
+  const { countries, theme } = useGlobalContext();
   const country = countries.find((country) => country.alpha3Code === id);
 
   const {
@@ -34,7 +34,14 @@ const CountryPage = () => {
   return (
     <main className="country">
       <Link to="/">
-        <button className="error__btn">
+        <button
+          className="error__btn"
+          style={
+            theme === "light-theme"
+              ? { boxShadow: "0px 3px 2px 0px rgba(0, 0, 0, 0.05)" }
+              : null
+          }
+        >
           <FaLongArrowAltLeft /> Back
         </button>
       </Link>
@@ -88,7 +95,19 @@ const CountryPage = () => {
                       to={`/countries/${country.alpha3Code}`}
                       key={country.alpha3Code}
                     >
-                      <button className="country__btn">{country.name}</button>
+                      <button
+                        className="country__btn"
+                        style={
+                          theme === "light-theme"
+                            ? {
+                                boxShadow:
+                                  "0px 3px 2px 0px rgba(0, 0, 0, 0.05)",
+                              }
+                            : null
+                        }
+                      >
+                        {country.name}
+                      </button>
                     </Link>
                   );
                 })

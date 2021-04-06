@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     document.documentElement.className = theme;
-  }, []);
+  }, [theme]);
 
   return (
     <div className="app">

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useGlobalContext } from "../context";
 
 // From https://www.w3resource.com/javascript-exercises/javascript-math-exercise-39.php
 const thousands_separators = (num) => {
@@ -16,8 +17,16 @@ const CountryItem = ({
   capital,
   alpha3Code,
 }) => {
+  const { theme } = useGlobalContext();
   return (
-    <article className="country-item">
+    <article
+      className="country-item"
+      style={
+        theme === "light-theme"
+          ? { boxShadow: "0px 3px 2px 0px rgba(0, 0, 0, 0.05)" }
+          : null
+      }
+    >
       <div className="country-item__image-container">
         <img src={flag} alt="" />
       </div>

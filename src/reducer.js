@@ -15,6 +15,12 @@ export const reducer = (state, action) => {
         filter: action.payload,
       };
 
+    case "SET_THEME":
+      return {
+        ...state,
+        theme: state.theme === "light-theme" ? "dark-theme" : "light-theme",
+      };
+
     default:
       return state;
   }
