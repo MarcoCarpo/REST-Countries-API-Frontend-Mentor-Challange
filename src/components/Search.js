@@ -1,11 +1,18 @@
 import React from "react";
-import { FaSearch, FaAngleDown } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 import { useGlobalContext } from "../context";
 
 const Search = () => {
-  const { countries, query, setQuery, setFilter, theme } = useGlobalContext();
+  const {
+    countries,
+    query,
+    setQuery,
+    setFilter,
+    theme,
+    filter,
+  } = useGlobalContext();
   const regions = [
-    "All Regions",
+    "Filter by Region",
     ...Array.from(new Set(countries.map((country) => country.region))).filter(
       (region) => region
     ),
@@ -43,7 +50,11 @@ const Search = () => {
           <select onChange={(e) => filterHandler(e)}>
             {regions.map((region, index) => {
               return (
-                <option key={index} value={region}>
+                <option
+                  key={index}
+                  value={region}
+                  defaultValue={region === filter && "selected"}
+                >
                   {region}
                 </option>
               );

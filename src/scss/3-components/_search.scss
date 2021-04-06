@@ -37,8 +37,11 @@
   &__select {
     width: 100%;
     max-width: 20rem;
+    padding: 2rem 3rem;
+    background: var(--background-element);
 
     select {
+      cursor: pointer;
       color: inherit;
       width: 100%;
       background: none;

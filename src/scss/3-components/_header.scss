@@ -11,6 +11,7 @@
   }
 
   &__title {
+    user-select: none;
     @include linear-font-size(1.4rem, 2.4rem, 37.5rem, 144rem);
     line-height: 1;
   }

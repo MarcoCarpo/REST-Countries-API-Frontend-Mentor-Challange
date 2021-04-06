@@ -2,8 +2,10 @@ import React from "react";
 import { reducer } from "./reducer";
 import axios from "axios";
 
-//MOCK DATA BEFORE API
-import countries from "./mock/mockCountries";
+const ls = window.localStorage;
+if (!ls.getItem("theme")) {
+  ls.setItem("theme", "dark-theme");
+}
 
 const AppContext = React.createContext();
 
@@ -14,14 +16,14 @@ const initialState = {
   isLoading: false,
   countries: [],
   query: "",
-  filter: "All Regions",
-  theme: "light-theme",
+  filter: "Filter by Region",
+  theme: ls.getItem("theme"),
 };
 
 const AppProvider = ({ children }) => {
   const [state, dispatch] = React.useReducer(reducer, initialState);
 
-  const fetchData = async (query) => {
+  const fetchData = React.useCallback(async () => {
     setLoading(true);
     try {
       const data = await axios(ALL_URL);
@@ -33,7 +35,7 @@ const AppProvider = ({ children }) => {
       console.log(error);
       setLoading(false);
     }
-  };
+  }, []);
 
   const setLoading = (loading) => {
     dispatch({ type: "SET_LOADING", payload: loading });
@@ -57,7 +59,11 @@ const AppProvider = ({ children }) => {
 
   React.useEffect(() => {
     fetchData();
-  }, []);
+  }, [fetchData]);
+
+  React.useEffect(() => {
+    ls.setItem("theme", state.theme);
+  }, [state.theme]);
 
   return (
     <AppContext.Provider

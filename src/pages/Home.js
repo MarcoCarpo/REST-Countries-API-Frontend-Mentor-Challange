@@ -3,7 +3,7 @@ import { Search, CountryItem } from "../components";
 import Loading from "../components/Loading";
 
 const Home = () => {
-  const { countries, isLoading, query, filter, theme } = useGlobalContext();
+  const { countries, isLoading, query, filter } = useGlobalContext();
 
   return (
     <main className="home">
@@ -13,7 +13,7 @@ const Home = () => {
         <section className="home__countries">
           {countries
             .filter((country) => {
-              if (filter === "All Regions") return country;
+              if (filter === "Filter by Region") return country;
               return country.region === filter;
             })
             .filter((country) =>
