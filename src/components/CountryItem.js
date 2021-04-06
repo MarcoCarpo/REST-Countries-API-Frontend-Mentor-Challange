@@ -36,7 +36,7 @@ const CountryItem = ({
             <Link to={`/countries/${alpha3Code}`}>{name}</Link>
           </h4>
         </header>
-        <section className="country-item__info">
+        <div className="country-item__info">
           <p>
             <strong>Population</strong>: {thousands_separators(population)}
           </p>
@@ -46,7 +46,7 @@ const CountryItem = ({
           <p>
             <strong>Capital</strong>: {capital}
           </p>
-        </section>
+        </div>
       </div>
     </article>
   );
