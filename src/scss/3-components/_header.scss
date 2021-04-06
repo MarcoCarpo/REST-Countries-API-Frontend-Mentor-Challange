@@ -12,7 +12,6 @@
 
   &__title {
     @include linear-font-size(1.4rem, 2.4rem, 37.5rem, 144rem);
-
     line-height: 1;
   }
 
@@ -26,6 +25,9 @@
     color: map-get($map: $colors, $key: white);
   }
 
-  @media (min-width: $break-tablet) {
+  @media (min-width: $break-laptop) {
+    &__content {
+      padding: $padding-default-vertical 0;
+    }
   }
 }

@@ -3,18 +3,23 @@
   padding: $padding-default;
   width: 100%;
   max-width: $break-laptop;
+  margin: 0 auto;
 
   &__countries {
-    padding: 3rem 0;
+    margin-top: $margin-default-vertical;
     @include flex(center, initial);
     flex-wrap: wrap;
-    gap: 4rem;
+    gap: 7rem;
   }
-  @media (min-width: $break-tablet) {
-    margin: 0 auto;
 
+  @media (min-width: $break-tablet) {
     &__countries {
-      justify-content: flex-start;
+      justify-content: space-between;
+
     }
+  }
+
+  @media (min-width: $break-laptop) {
+    padding: $padding-default 0;
   }
 }

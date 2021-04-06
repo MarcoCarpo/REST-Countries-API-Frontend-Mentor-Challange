@@ -1,7 +1,6 @@
 import { useGlobalContext } from "../context";
 import { Search, CountryItem } from "../components";
 
-
 const Home = () => {
   const { countries } = useGlobalContext();
   console.log(countries);

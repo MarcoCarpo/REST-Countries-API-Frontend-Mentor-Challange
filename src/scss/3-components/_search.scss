@@ -1,8 +1,11 @@
 .search {
   color: map-get($map: $colors, $key: white);
-  @include flex(space-between, flex-start);
-  flex-wrap: wrap;
-  gap: 4rem;
+
+  &__content {
+    @include flex(space-between, flex-start);
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
 
   &__input {
     width: 100%;

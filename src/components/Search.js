@@ -10,18 +10,20 @@ const Search = () => {
 
   return (
     <form className="search">
-      <div className="search__input">
-        <button type="submit">
-          <FaSearch className="search__icon" />
-        </button>
-        <input type="text" placeholder="Search for a country... " />
-      </div>
-      <div className="search__select">
-        <select>
-          {regions.map((region) => {
-            return <option>{region}</option>;
-          })}
-        </select>
+      <div className="search__content">
+        <div className="search__input">
+          <button type="submit">
+            <FaSearch className="search__icon" />
+          </button>
+          <input type="text" placeholder="Search for a country... " />
+        </div>
+        <div className="search__select">
+          <select>
+            {regions.map((region) => {
+              return <option>{region}</option>;
+            })}
+          </select>
+        </div>
       </div>
     </form>
   );
